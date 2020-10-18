@@ -1,0 +1,76 @@
+<html>
+	<head>
+		<title>Dancem8</title>
+		<link rel="stylesheet" href="style.css" />
+	</head>
+	<body>
+		<div class="two-panel-row">
+			<div class="left-panel">
+				<div class="left-panel-contents">
+					<img src="logo_shadow.png" alt="dancem8_logo" />
+					<h1>Sayam Kanwar</h1>
+					<p>Profile</p>
+					<p>Progress</p>
+					<p>Explore</p>
+					<p>Add New Move</p>
+				</div>
+			</div>
+			<div class="right-panel">
+				<h1 id="dance_move_name"></h1>
+				<div class="right-panel-contents">
+					<img class="guide" src="pirouette_guide.jpg" alt="pirouette_guide" />
+					<form
+						action="http://localhost:3000/upload"
+						id="analysis-form"
+						method="post"
+						onsubmit="return setVars()"
+						enctype="multipart/form-data"
+					>
+						<label for="step_no"
+							>Please choose the step you want to analyze</label
+						><br />
+						<select class="input" name="step_no" id="step_no">
+							<option value="Step 1">Step 1</option>
+							<option value="Step 2">Step 2</option>
+							<option value="Step 3">Step 3</option>
+							<option value="Step 4">Step 4</option>
+							<option value="Step 5">Step 5</option> </select
+						><br />
+						<label for="step_no">Upload your image for analysis</label><br />
+						<input
+							class="input"
+							type="file"
+							name="userStepImg"
+							id="userStepImg"
+						/><br />
+						<input
+							type="submit"
+							name="submit"
+							class="input-submit"
+							value="ANALYZE"
+						/>
+						<a class="view_analysis" href="analysis.html">View analysis</a>
+					</form>
+				</div>
+			</div>
+		</div>
+		<script>
+			function setVars() {
+				localStorage.setItem(
+					"step_no",
+					document
+						.getElementById("step_no")
+						.value.replace(/\s+/g, "")
+						.toLowerCase()
+				);
+				document.getElementById("analysis-form").submit();
+				return true;
+			}
+			String.prototype.capitalize = function() {
+				return this.charAt(0).toUpperCase() + this.slice(1);
+			};
+			let move = localStorage.getItem("dance_move");
+			document.getElementById("dance_move_name").innerHTML = move.capitalize();
+		</script>
+	</body>
+</html>

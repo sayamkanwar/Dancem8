@@ -1,0 +1,104 @@
+<html>
+	<head>
+		<title>Dancem8</title>
+		<style>
+			.userImg {
+				width: 300px;
+				height: 300px;
+				/* visibility: hidden; */
+			}
+
+			#feedback_table {
+				display: none;
+			}
+		</style>
+		<link rel="stylesheet" href="style.css" />
+	</head>
+	<body>
+		<div class="two-panel-row">
+			<div class="left-panel">
+				<div class="left-panel-contents">
+					<a href="index.html">
+						<img src="logo_shadow.png" alt="dancem8_logo" />
+					</a>
+					<h1>Sayam Kanwar</h1>
+					<p>Profile</p>
+					<p>Progress</p>
+					<p>Explore</p>
+					<p>Add New Move</p>
+				</div>
+			</div>
+			<div class="right-panel">
+				<div class="right-panel-contents column">
+					<div class="img-box">
+						<img
+							class="userImg"
+							src="./userStepImgs/image01.jpg"
+							id="test_img"
+						/>
+					</div>
+					<br />
+					<div class="feedback">
+						<div id="feedback_loading">Processing...</div>
+						<table id="feedback_table" border="1">
+							<tr>
+								<th>Body Part</th>
+								<th>Feedback</th>
+							</tr>
+							<tr>
+								<td>Left Shoulder</td>
+								<td id="leftShoulder_feedback"></td>
+							</tr>
+							<tr>
+								<td>Right Shoulder</td>
+								<td id="rightShoulder_feedback"></td>
+							</tr>
+							<tr>
+								<td>Left Elbow</td>
+								<td id="leftElbow_feedback"></td>
+							</tr>
+							<tr>
+								<td>Right Elbow</td>
+								<td id="rightElbow_feedback"></td>
+							</tr>
+							<tr>
+								<td>Left Wrist</td>
+								<td id="leftWrist_feedback"></td>
+							</tr>
+							<tr>
+								<td>Right Wrist</td>
+								<td id="rightWrist_feedback"></td>
+							</tr>
+							<tr>
+								<td>Left Hip</td>
+								<td id="leftHip_feedback"></td>
+							</tr>
+							<tr>
+								<td>Right Hip</td>
+								<td id="rightHip_feedback"></td>
+							</tr>
+							<tr>
+								<td>Left Knee</td>
+								<td id="leftKnee_feedback"></td>
+							</tr>
+							<tr>
+								<td>Right Knee</td>
+								<td id="rightKnee_feedback"></td>
+							</tr>
+							<tr>
+								<td>Left Ankle</td>
+								<td id="leftAnkle_feedback"></td>
+							</tr>
+							<tr>
+								<td>Right Ankle</td>
+								<td id="rightAnkle_feedback"></td>
+							</tr>
+						</table>
+					</div>
+					<br />
+				</div>
+			</div>
+		</div>
+		<script src="./script.js"></script>
+	</body>
+</html>

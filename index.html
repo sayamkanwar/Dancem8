@@ -1,0 +1,57 @@
+<html>
+	<head>
+		<title>Dancem8</title>
+		<link rel="stylesheet" href="style.css" />
+	</head>
+	<body>
+		<div class="two-panel-row">
+			<div class="left-panel">
+				<div class="left-panel-contents">
+					<img src="logo_shadow.png" alt="dancem8_logo" />
+					<h1>Sayam Kanwar</h1>
+					<p>Profile</p>
+					<p>Progress</p>
+					<p>Explore</p>
+					<p>Add New Move</p>
+				</div>
+			</div>
+			<div class="right-panel">
+				<h1>Dance Moves</h1>
+				<div class="right-panel-contents">
+					<a href="upload.html">
+						<div class="dance-move" id="pirouette_box">
+							<img src="ballet.png" alt="pirouette" />
+							<h3>Pirouette</h3>
+						</div>
+					</a>
+					<div class="dance-move">
+						<img src="ballet.png" alt="pirouette" />
+						<h3>Plie</h3>
+					</div>
+					<div class="dance-move">
+						<img src="ballet.png" alt="pirouette" />
+						<h3>Pique Turn</h3>
+					</div>
+					<div class="dance-move">
+						<img src="ballet.png" alt="pirouette" />
+						<h3>Passe</h3>
+					</div>
+					<div class="dance-move">
+						<img src="ballet.png" alt="pirouette" />
+						<h3>Rond De Jambe</h3>
+					</div>
+					<div class="dance-move">
+						<img src="ballet.png" alt="pirouette" />
+						<h3>Fan Kick</h3>
+					</div>
+				</div>
+			</div>
+		</div>
+		<script>
+			let pirouette_box = document.getElementById("pirouette_box");
+			pirouette_box.onclick = function() {
+				localStorage.setItem("dance_move", "pirouette");
+			};
+		</script>
+	</body>
+</html>
